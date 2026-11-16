@@ -1,0 +1,31 @@
+vTranscript: os termos de uso
+
+Copyright (c) 2026 Vinícius Ventura. Todos os direitos reservados.
+
+1. O uso. O vTranscript é gratuito. Você pode baixá-lo, instalá-lo e usá-lo, para fins pessoais ou profissionais, em
+   quantos computadores quiser.
+
+2. O que não é permitido sem a autorização por escrito do autor:
+   - vender o vTranscript ou cobrar por ele;
+   - redistribuir o instalador ou o app (para indicar a alguém, compartilhe o link da página do vTranscript);
+   - modificar o app;
+   - fazer a engenharia reversa dele, salvo o que a lei permitir.
+
+3. Os componentes de terceiros. O instalador leva componentes de terceiros, listados em AVISOS-DE-TERCEIROS.md, que
+   seguem as licenças deles. Estes termos não tiram nenhum direito que essas licenças dão. Por exemplo, você pode
+   trocar as bibliotecas do FFmpeg, que estão sob a LGPL.
+
+4. A OpenAI. A ata e a transcrição pela nuvem usam a API da OpenAI, com a chave e a conta de quem usa, nos termos da
+   OpenAI. Os custos dessa conta são de quem usa.
+
+5. As gravações. Quem grava uma reunião é responsável por avisar os participantes e por obter o consentimento deles,
+   conforme a lei aplicável (no Brasil, inclusive a LGPD).
+
+6. Sem garantia. O vTranscript é fornecido "como está", em versão de teste, sem garantia de nenhum tipo. O autor não
+   responde por perda de dados, por custos com a OpenAI ou por outros danos que venham do uso. Faça cópias dos seus
+   dados.
+
+7. A marca. O nome vTranscript, o símbolo (os dois balões de conversa sobrepostos) e a identidade visual são da marca
+   Vinícius Ventura.
+
+Estes termos podem mudar nas próximas versões. Cada versão segue os termos que vieram com ela.
