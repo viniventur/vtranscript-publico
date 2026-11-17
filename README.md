@@ -44,6 +44,8 @@ vTranscript is a free Windows desktop app for your meetings.
 - It listens to your microphone and to the system audio: Meet, Teams, Zoom or any other app, with no bot joining the
   call.
 - It transcribes as the meeting happens and recognizes who is speaking by their voice.
+- It notices when a meeting starts (Teams, Zoom, Meet in the browser and others) and offers to record it, with a
+  ready-made consent message to paste in the meeting chat.
 - It keeps every meeting with your notes. With your own OpenAI key, it also writes the minutes.
 
 Transcription runs on your computer, on an NVIDIA graphics card or on the CPU, or through OpenAI's API. There is no
@@ -100,7 +102,8 @@ exportar depois.
    - Para parar, use o mesmo atalho ou o "Parar reunião", que fica no lugar do botão enquanto a reunião acontece.
 
 > [!NOTE]
-> Gravar uma reunião pede o aviso a quem está nela. Avise os participantes, e respeite quem não quiser ser gravado.
+> Gravar uma reunião pede o aviso a quem está nela. Avise os participantes, e respeite quem não quiser ser gravado. O
+> vTranscript ajuda: ao começar a gravar, ele traz um texto pronto para colar no chat da reunião.
 
 ## A chave da OpenAI
 
@@ -127,6 +130,16 @@ custos mostra o que cada pedido custou, dia a dia, mês a mês.
   - As falas aparecem poucos segundos depois de ditas, com quem falou e a hora.
   - Ao lado ficam as suas notas, e o `Ctrl+M` marca um momento.
   - Numa reunião online com caixa de som, a fala dos outros não volta pelo microfone como se fosse sua.
+- **Avisa quando uma reunião começa.**
+  - Quando o Teams, o Zoom, o Webex, o Slack, o Skype, o GoTo ou o navegador (o Meet e as outras reuniões na web) usa
+    o microfone por mais de uns segundos, um aviso no canto da tela pergunta "Começou uma reunião?", com o **Gravar** e
+    o **Agora não**.
+  - O aviso não tira o foco de onde você está digitando e fecha sozinho em 20 segundos. Com um jogo, um vídeo ou uma
+    apresentação em tela cheia, ele espera o fim.
+  - O vTranscript precisa estar aberto, nem que seja só na bandeja.
+- **Lembra de pedir o consentimento.** Ao começar a gravar, o vTranscript traz um texto pronto para colar no chat da
+  reunião, com o **Copiar o aviso**. O texto é seu: ele se muda em Configurações › Gravação, onde o aviso e o lembrete
+  também se desligam.
 - **Reconhece as vozes.** Cadastre a sua voz e a de quem costuma estar nas reuniões, falando 12 segundos, e o vTranscript
   põe o nome nas falas. Uma voz que ele não conhece vira um "Falante 1" daquela reunião, que você pode nomear depois.
 - **Faz a ata,** com a [chave da OpenAI](#a-chave-da-openai).
@@ -172,6 +185,9 @@ notas e a ata que ainda não foram salvas.
   gravado; o prazo se muda ali.
 - **À OpenAI, a ata leva só o texto:** a transcrição, com quem falou, as notas e as suas instruções. O áudio nunca vai.
   O pedido sai com o aviso para a OpenAI não guardar a resposta.
+- **O aviso de reunião só lê.** Para saber que um app passou a usar o microfone, o vTranscript lê o que o próprio
+  Windows registra para acender o ícone do microfone na barra de tarefas. Ele não escreve nada ali e não guarda o que
+  leu. E não grava sozinho: a gravação só começa quando você clica em **Gravar** ou usa o `Ctrl+Alt+T`.
 - **Os dados são seus.** Eles ficam em `%APPDATA%\br.com.viniciusventura.vtranscript\`: o banco (`vtranscript.db`, um
   arquivo SQLite), a config, as vozes e o áudio guardado. O "Apagar de vez" apaga a reunião do banco de verdade.
 
@@ -221,7 +237,16 @@ Não, se você transcreve no computador e não gera a ata. A ata manda o texto d
 
 O instalador ainda não tem assinatura de código, que é um certificado pago. Em "O Windows protegeu o computador", clique
 em **Mais informações → Executar assim mesmo**. Para conferir se o arquivo é o publicado, compare o SHA-256 das notas da
-versão com o do seu download, no PowerShell: `Get-FileHash .\vTranscript_0.2.0_x64-setup.exe`.
+versão com o do seu download, no PowerShell: `Get-FileHash .\vTranscript_*_x64-setup.exe`.
+
+</details>
+
+<details>
+<summary><b>Como desligo o aviso de reunião?</b></summary>
+<br>
+
+Em Configurações › Gravação, desligue o **Avisar quando uma reunião começar**. O **Lembrete de consentimento** se
+desliga ali também.
 
 </details>
 
