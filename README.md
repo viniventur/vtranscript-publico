@@ -46,7 +46,8 @@ vTranscript is a free Windows desktop app for your meetings.
 - It transcribes as the meeting happens and recognizes who is speaking by their voice.
 - It notices when a meeting starts (Teams, Zoom, Meet in the browser and others) and offers to record it, with a
   ready-made consent message to paste in the meeting chat.
-- It keeps every meeting with your notes. With your own OpenAI key, it also writes the minutes.
+- It keeps every meeting with your notes, which take the main screen and accept Markdown. With your own OpenAI key, it
+  also writes the minutes, and you can correct them with a plain instruction.
 
 Transcription runs on your computer, on an NVIDIA graphics card or on the CPU, or through OpenAI's API. There is no
 account and no server. The interface is in Brazilian Portuguese. [Download the latest installer](../../releases/latest).
@@ -128,8 +129,13 @@ custos mostra o que cada pedido custou, dia a dia, mês a mês.
 
 - **Transcreve enquanto a reunião acontece.**
   - As falas aparecem poucos segundos depois de ditas, com quem falou e a hora.
-  - Ao lado ficam as suas notas, e o `Ctrl+M` marca um momento.
+  - A tela é das suas notas: elas e a transcrição ficam em abas, e quem fala acende numa faixa de iniciais. O `Ctrl+M`
+    marca um momento.
   - Numa reunião online com caixa de som, a fala dos outros não volta pelo microfone como se fosse sua.
+  - Na reunião presencial, só com o microfone, ele ouve sem os efeitos de áudio do Windows e não divide a mesma pessoa
+    em vários falantes.
+- **Aceita Markdown nas notas.** `# título`, `- lista`, `1. lista`, `**negrito**` e `*itálico*` viram formatação,
+  digitados ou colados de outro app. As exportações levam a formatação, sem os símbolos.
 - **Avisa quando uma reunião começa.**
   - Quando o Teams, o Zoom, o Webex, o Slack, o Skype, o GoTo ou o navegador (o Meet e as outras reuniões na web) usa
     o microfone por mais de uns segundos, um aviso no canto da tela pergunta "Começou uma reunião?", com o **Gravar** e
@@ -141,12 +147,16 @@ custos mostra o que cada pedido custou, dia a dia, mês a mês.
   reunião, com o **Copiar o aviso**. O texto é seu: ele se muda em Configurações › Gravação, onde o aviso e o lembrete
   também se desligam.
 - **Reconhece as vozes.** Cadastre a sua voz e a de quem costuma estar nas reuniões, falando 12 segundos, e o vTranscript
-  põe o nome nas falas. Uma voz que ele não conhece vira um "Falante 1" daquela reunião, que você pode nomear depois.
+  põe o nome nas falas. Uma voz que ele não conhece vira um "Falante 1" daquela reunião, que você pode nomear depois: o
+  nome entra também na ata que já existe.
 - **Faz a ata,** com a [chave da OpenAI](#a-chave-da-openai).
   - Ela vem em tópicos, um assunto por vez, com os próximos passos no fim, cada um com o responsável e o prazo.
   - Depois de gerada, a ata é sua: ela se edita como um texto e se grava sozinha.
+  - O **Ajustar a ata** corrige o que ela entendeu errado: diga o que mudar ("o que você entendeu como X é Y"), e só
+    isso muda, com as suas edições.
   - Você escolhe o estilo (Conciso, Jornalístico ou Ata formal) e pode dar instruções só para aquela ata.
-  - O "Parar e gerar ata" pede a ata quando a reunião termina.
+  - O "Parar e gerar ata" pede a ata quando a reunião termina. O "Parar", ao lado, para sem ela, e a ata se gera
+    depois.
 - **Guarda cada reunião.**
   - A lista mostra a duração e quem falou, com o filtro pelo título ou pelas pessoas.
   - Tem destaques (citação, decisão, ação) e uma lixeira de 30 dias.
@@ -183,8 +193,8 @@ notas e a ata que ainda não foram salvas.
 - **O áudio não sai do computador**, a não ser que você escolha a transcrição pela OpenAI.
 - **O áudio só fica guardado se você ligar essa opção**, em Configurações › Gravação. Ele sai sozinho 30 dias depois de
   gravado; o prazo se muda ali.
-- **À OpenAI, a ata leva só o texto:** a transcrição, com quem falou, as notas e as suas instruções. O áudio nunca vai.
-  O pedido sai com o aviso para a OpenAI não guardar a resposta.
+- **À OpenAI, a ata leva só o texto:** a transcrição, com quem falou, as notas e as suas instruções (no Ajustar a ata,
+  também a ata como está). O áudio nunca vai. O pedido sai com o aviso para a OpenAI não guardar a resposta.
 - **O aviso de reunião só lê.** Para saber que um app passou a usar o microfone, o vTranscript lê o que o próprio
   Windows registra para acender o ícone do microfone na barra de tarefas. Ele não escreve nada ali e não guarda o que
   leu. E não grava sozinho: a gravação só começa quando você clica em **Gravar** ou usa o `Ctrl+Alt+T`.
