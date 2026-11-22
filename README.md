@@ -100,6 +100,8 @@ exportar depois.
 3. **Ensine o vocabulário:** os nomes de pessoas e de clientes e as siglas que a transcrição deve escrever certo.
 4. **Comece a ouvir** com `Ctrl+Alt+T`, de qualquer lugar do Windows, ou pelo "Começar a ouvir".
    - A reunião online ouve o seu microfone e o áudio do sistema; a presencial, só o microfone.
+   - Mudou no meio (alguém entrou pela chamada, ou a sala esvaziou)? Troque o tipo embaixo do título do Ao vivo: a
+     reunião continua, sem parar de ouvir.
    - Para parar, use o mesmo atalho ou o "Parar reunião", que fica no lugar do botão enquanto a reunião acontece.
 
 > [!NOTE]
@@ -134,6 +136,8 @@ custos mostra o que cada pedido custou, dia a dia, mês a mês.
   - Numa reunião online com caixa de som, a fala dos outros não volta pelo microfone como se fosse sua.
   - Na reunião presencial, só com o microfone, ele ouve sem os efeitos de áudio do Windows e não divide a mesma pessoa
     em vários falantes.
+  - O tipo da reunião (online ou presencial) troca no meio dela, sem parar de ouvir. A reunião que teve fala nos dois
+    fica como "Online e presencial".
 - **Aceita Markdown nas notas.** `# título`, `- lista`, `1. lista`, `**negrito**` e `*itálico*` viram formatação,
   digitados ou colados de outro app. As exportações levam a formatação, sem os símbolos.
 - **Avisa quando uma reunião começa.**

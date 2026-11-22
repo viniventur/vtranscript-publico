@@ -3,7 +3,7 @@
 O instalador do vTranscript leva componentes de outras pessoas e empresas, cada um com a licença dele. Os termos do
 vTranscript (o arquivo [LICENSE](LICENSE)) não mudam essas licenças.
 
-Esta lista é a da versão 0.4.0. Ela saiu dos metadados dos pacotes: o `cargo` para o núcleo em Rust, o `pnpm` para a
+Esta lista é a da versão 0.5.0. Ela saiu dos metadados dos pacotes: o `cargo` para o núcleo em Rust, o `pnpm` para a
 interface e os `dist-info` para o motor em Python. Nas licenças, `OR` quer dizer "à escolha de quem usa", e `AND`,
 "as duas valem".
 
